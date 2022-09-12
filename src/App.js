@@ -5,9 +5,8 @@ import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
 import Contact from "./pages/contact/Contact";
-import About from "./pages/about/About";
 import Register from "./pages/register/Register";
-import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useContext } from "react";
 import { Context } from "./context/Context";
 
@@ -20,7 +19,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
         <Route path="/register" element={ user ? <Home/> :<Register />} />
         <Route path="/login" element={ user ? <Home/> :<Login />} />        
         <Route path="/write" element={ user ? <Write/> :<Register />} />

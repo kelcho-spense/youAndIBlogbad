@@ -23,15 +23,12 @@ function TopBar() {
             
             <li className=" topListItem">
               <Link className="link" to ="/">HOME</Link>
+            </li>            
+            <li className=" topListItem">
+              <Link className="link" to ="/write">WRITE</Link>
             </li>
             <li className=" topListItem">
-            <Link className="link" to ="/about">ABOUT</Link>
-            </li>
-            <li className=" topListItem">
-            <Link className="link" to ="/contact">CONTACT</Link>
-            </li>
-            <li className=" topListItem">
-            <Link className="link" to ="/write">WRITE</Link>
+              <Link className="link" to ="/contact">CONTACT</Link>
             </li>
             <li className=" topListItem"
             onClick={handleLogout}
@@ -46,7 +43,7 @@ function TopBar() {
             user ? (
               <Link to ="/settings">
                 {
-                  user.profilepic == "" ? (
+                  user.profilepic === "" ? (
                     <img  className="topImg " src={`https://avatars.dicebear.com/api/pixel-art/${user.username}.svg`} alt="..." />
                   ):(
                     <img  className="topImg " src={PF + user.profilepic} alt="..." />
