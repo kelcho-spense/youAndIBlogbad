@@ -1,0 +1,88 @@
+.write{
+    padding-top: 50px;
+}
+.writeImg{
+    margin-left: 150px;
+    width: 70vw;
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+.writeForm{
+    position: relative;
+    top: 20px;
+    right: 50px;
+}
+.writeFormGroup{
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+}
+.writeIcon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: rgba(121, 118, 118);
+    cursor: pointer;
+}
+.writeInput{
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+}
+.writeInput:focus{
+    outline: none;
+}
+.writeText{
+     margin-left: 150px;
+    height: 20vh;
+}
+.writeSubmit{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.selectCategory {
+    /* display: flex; */
+     margin-inline: 170px; 
+    font-size: 20px;     
+}
+.allCheckItems  {
+    display: flex;
+}
+.allCheckItems > .checkItem {
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;    
+}
+.allCheckItems > label ,input { 
+    margin: .4rem;
+    cursor: pointer;
+}   
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0px;
+    margin-left: 10px;
+  }
+  /* .checked-item,
+  .not-checked-item {
+    margin-left: 10px;
+  }
+  .checked-item {
+    text-decoration: line-through;
+  }
+     */
