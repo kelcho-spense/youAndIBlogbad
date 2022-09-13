@@ -4,7 +4,7 @@ import './posts.css';
 function Posts({ posts }) {
   return (
     <div className='posts' >
-      {posts.map((p,index) => (
+      {Array.from(posts).map((p,index) => (
         <Post post={p} key={index} />
      ) )}
     </div>

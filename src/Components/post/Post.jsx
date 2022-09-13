@@ -10,7 +10,7 @@ function Post({ post }) {
         )}      
       <div className="postInfo">
         <div className="postCats">
-          {post.categories.map((c,index) => (
+          {Array.from(post.categories).map((c,index) => (
               <div className="postCat" key={index}>
                 {c.name}
               </div>
