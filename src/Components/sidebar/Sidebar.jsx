@@ -5,7 +5,7 @@ import { useEffect, useState,useContext } from "react";
 import { Context } from '../../context/Context';
 
 function Sidebar() {
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://youandiblogapi.herokuapp.com/images/";
   const [cats, setCats] = useState([]);
   const { user } = useContext(Context);
 
