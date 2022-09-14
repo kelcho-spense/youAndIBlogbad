@@ -18,7 +18,7 @@ function Write() {
   useEffect(() => {  
     const getCats = async () => {
       const res = await axios.get("/categories");
-      setCheckList(res.data);
+      setCheckList(res?.data);
     };
     getCats();
   }, [])

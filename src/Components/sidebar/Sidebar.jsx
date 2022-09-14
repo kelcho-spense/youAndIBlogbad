@@ -12,7 +12,7 @@ function Sidebar() {
   useEffect(() => {
     const getCats = async () => {
       const res = await axios.get("/categories");
-      setCats(res.data);
+      setCats(res?.data);
     };
     getCats();
   },[])
@@ -40,7 +40,7 @@ function Sidebar() {
                 <Link to ={`/?cat=${cat.name}`} key={index} className="link">
                  <li className="sidebarListItem">{cat.name}</li>
                  </Link>
-              )) : "loading..."}
+              )) : null}
                 </ul>
         </div>
         <div className="sidebarItem">
