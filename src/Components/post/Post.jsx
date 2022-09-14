@@ -2,10 +2,7 @@ import './post.css'
 import { Link } from 'react-router-dom';
 
 function Post({ post }) {
-  const PF = "https://youandiblogapi.herokuapp.com/images/"; 
-  console.log(Array.isArray(post));
-  const aa = Array.from(post);
-  console.log(aa);
+  const PF = "http://localhost:5000/images/";
   return (
     <div className='post'>
         {post.photo && (
@@ -13,12 +10,12 @@ function Post({ post }) {
         )}      
       <div className="postInfo">
         <div className="postCats">
-          {Array.isArray(post.categories) ? Array.from(post.categories).map((c,index) => (
+          {
+            post.categories.map((c,index) => (
               <div className="postCat" key={index}>
                 {c.name}
               </div>
-            )): null
-          }
+            ))}
 
           <Link className="link" to={`/post/${post._id}`}>
             <span className="postTitle">

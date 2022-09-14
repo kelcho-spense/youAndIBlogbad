@@ -5,7 +5,7 @@ import { useEffect, useState,useContext } from "react";
 import { Context } from '../../context/Context';
 
 function Sidebar() {
-  const PF = "https://youandiblogapi.herokuapp.com/images/";
+  const PF = "http://localhost:5000/images/";
   const [cats, setCats] = useState([]);
   const { user } = useContext(Context);
 
@@ -16,15 +16,14 @@ function Sidebar() {
     };
     getCats();
   },[])
-  
   return (
     <div className="sidebar">
         <div className="sidebarItem">
             <span className="sidebarTitle" >ABOUT ME</span>
-            {user && user.profilepic ? (
+            {user.profilepic ? (
              <img className="aboutMeImg" src={PF + user.profilepic} alt="..." />
               ) : ( 
-                <span >📧</span>
+                <span clas>📧</span>
               )}
         <p>
           {!user ? (
@@ -37,12 +36,12 @@ function Sidebar() {
         <div className="sidebarItem">
             <span className="sidebarTitle">CATEGORIES</span>
             <ul className="sidebarList">
-              {Array.from(cats).map((cat,index) => (
+              {cats.map((cat,index) => (
                 <Link to ={`/?cat=${cat.name}`} key={index} className="link">
                  <li className="sidebarListItem">{cat.name}</li>
                  </Link>
               ))}
-            </ul>
+                </ul>
         </div>
         <div className="sidebarItem">
             <span className="sidebarTitle">FOLLOW US</span>
