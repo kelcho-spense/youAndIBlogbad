@@ -5,7 +5,7 @@ import { useEffect, useState,useContext } from "react";
 import { Context } from '../../context/Context';
 
 function Sidebar() {
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://youandiblogapi.herokuapp.com/images/";
   const [cats, setCats] = useState([]);
   const { user } = useContext(Context);
 
@@ -20,10 +20,10 @@ function Sidebar() {
     <div className="sidebar">
         <div className="sidebarItem">
             <span className="sidebarTitle" >ABOUT ME</span>
-            {user.profilepic ? (
+            {user?.profilepic ? (
              <img className="aboutMeImg" src={PF + user.profilepic} alt="..." />
               ) : ( 
-                <span clas>📧</span>
+                <span >📧</span>
               )}
         <p>
           {!user ? (
