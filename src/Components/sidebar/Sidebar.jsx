@@ -21,7 +21,7 @@ function Sidebar() {
         <div className="sidebarItem">
             <span className="sidebarTitle" >ABOUT ME</span>
             {user?.profilepic ? (
-             <img className="aboutMeImg" src={PF + user.profilepic} alt="..." />
+             <img className="aboutMeImg" src={PF + user?.profilepic} alt="..." />
               ) : ( 
                 <span >📧</span>
               )}
@@ -36,7 +36,7 @@ function Sidebar() {
         <div className="sidebarItem">
             <span className="sidebarTitle">CATEGORIES</span>
             <ul className="sidebarList">
-              {cats.map((cat,index) => (
+              {cats?.map((cat,index) => (
                 <Link to ={`/?cat=${cat.name}`} key={index} className="link">
                  <li className="sidebarListItem">{cat.name}</li>
                  </Link>
